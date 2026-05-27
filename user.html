@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SebaHub - User Panel</title>
+    <link rel="stylesheet" href="/sebahub/user.css">
+</head>
+<body>
+    <div class="user-container">
+        <!-- Sidebar -->
+        <aside class="user-sidebar">
+            <div class="logo">
+                <h2>👤 User</h2>
+            </div>
+            <nav class="user-nav">
+                <a href="#profile" class="nav-item active" onclick="showUserSection('profile')">👤 My Profile</a>
+                <a href="#orders" class="nav-item" onclick="showUserSection('orders')">📦 My Orders</a>
+                <a href="#wishlist" class="nav-item" onclick="showUserSection('wishlist')">❤️ Wishlist</a>
+                <a href="#account" class="nav-item" onclick="showUserSection('account')">⚙️ Account</a>
+                <a href="/sebahub/index.html" class="nav-item logout">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="user-main">
+            <!-- Header -->
+            <header class="user-header">
+                <div class="header-left">
+                    <h1>Welcome Back, User! 👋</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">john@example.com</span>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+
+            <!-- Profile Section -->
+            <section id="profile" class="user-section active">
+                <h2>My Profile</h2>
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="https://via.placeholder.com/120" alt="Profile" class="profile-image">
+                        <div class="profile-info">
+                            <h3>John Doe</h3>
+                            <p>john@example.com</p>
+                            <p class="member-since">Member since January 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <h4>Total Orders</h4>
+                            <p>15</p>
+                        </div>
+                        <div class="stat">
+                            <h4>Total Spent</h4>
+                            <p>$3,450.99</p>
+                        </div>
+                        <div class="stat">
+                            <h4>Loyalty Points</h4>
+                            <p>3,450</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <h4>Contact Information</h4>
+                        <p><strong>Email:</strong> john@example.com</p>
+                        <p><strong>Phone:</strong> +1 234-567-8900</p>
+                        <p><strong>Address:</strong> 123 Main St, City, Country</p>
+                        <button class="btn btn-secondary">Edit Profile</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="orders" class="user-section">
+                <h2>My Orders</h2>
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Premium Plan</td>
+                            <td>$299.99</td>
+                            <td><span class="badge success">Delivered</span></td>
+                            <td>2024-01-20</td>
+                            <td><button class="btn-small btn-view">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1000</td>
+                            <td>Starter Plan</td>
+                            <td>$99.99</td>
+                            <td><span class="badge success">Delivered</span></td>
+                            <td>2024-01-15</td>
+                            <td><button class="btn-small btn-view">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>#999</td>
+                            <td>Enterprise Plan</td>
+                            <td>$999.99</td>
+                            <td><span class="badge warning">Processing</span></td>
+                            <td>2024-01-10</td>
+                            <td><button class="btn-small btn-view">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Wishlist Section -->
+            <section id="wishlist" class="user-section">
+                <h2>My Wishlist</h2>
+                <div class="wishlist-grid">
+                    <div class="wishlist-item">
+                        <img src="https://via.placeholder.com/200" alt="Product">
+                        <h4>Premium Plan</h4>
+                        <p class="price">$299.99</p>
+                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <button class="btn btn-secondary btn-small">Remove</button>
+                    </div>
+                    <div class="wishlist-item">
+                        <img src="https://via.placeholder.com/200" alt="Product">
+                        <h4>Enterprise Plan</h4>
+                        <p class="price">$999.99</p>
+                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <button class="btn btn-secondary btn-small">Remove</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Section -->
+            <section id="account" class="user-section">
+                <h2>Account Settings</h2>
+                <div class="account-settings">
+                    <div class="settings-group">
+                        <h3>Change Password</h3>
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <input type="password" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-input">
+                        </div>
+                        <button class="btn btn-primary">Update Password</button>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Preferences</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Receive order updates via email
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Receive promotional offers
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Receive newsletter
+                            </label>
+                        </div>
+                        <button class="btn btn-primary">Save Preferences</button>
+                    </div>
+
+                    <div class="settings-group danger">
+                        <h3>Danger Zone</h3>
+                        <p>Deleting your account is permanent and cannot be undone.</p>
+                        <button class="btn btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/sebahub/user.js"></script>
+</body>
+</html>
